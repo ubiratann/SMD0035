@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{geometry}
+\geometry{a4paper, left=3cm, right=2cm, top=3cm,
+bottom=2cm}
+
+\begin{document}
+  \begin{enumerate}
+    \item \textbf{O que são conjuntos disjuntos} \newline
+    São conjuntos que não possuem elementos em comum.
+    \item \textbf{Defina as seguintes operações clássicas usando apenas notação matemática}
+    \begin{enumerate}[(a)]
+      \item \textbf{União de conjuntos:}
+      \begin{math}
+        \\ A \cup B = x  \ | \ x \in A  \ ou \ x  \in B \\
+        Exemplo: \\
+        A = \{ a,b,c \} \\
+        B = \{ c,d,e \} \\
+        A \cup B = \{a,b,c,d,e,f\}
+      \end{math}
+      \item \textbf{Interseção de conjuntos:}
+      \begin{math}
+        \\ A \cap B = x \ | \ x \in A \ e \ x \in B \\
+        Exemplo: \\
+        A = \{ a,b,c \} \\
+        B = \{ c,d,e \} \\
+        A \cap B = \{c\}
+      \end{math}
+      \item \textbf{Produto cartesiano:}
+      \begin{math}
+        \\ A \times B =  (x,y) \ | \ x \in A \ e \ y \in B \\
+        Exemplo: \\
+        A = \{ a,b,c \} \\
+        B = \{ d,e \} \\
+        A \times B = \{ (a,d),(a,e),(b,d),(b,e),(c,d),(c,e)\}
+      \end{math}
+    \end{enumerate}
+    \item \textbf{Defina o conjunto das partes de A denotado por $\wp(A)$, depois escreva  $ \wp(A) $ quando:}
+    \begin{itemize}
+      \item O conjunto das partes é o conjunto definido por:
+      \begin{math}
+        \wp(A) = \{ X \ | \ X \subset A \}
+      \end{math}
+    \end{itemize}
+    \begin{enumerate}[(a)]
+      \item \textbf{A = \{a,b\}:}
+      \begin{math}
+        \\ \wp(A) = \{\emptyset, \{a\},\{b\},\{a,b\}\}
+      \end{math}
+      \item \textbf{A = \{1,2,3\}}:
+      \begin{math}
+        \\ \wp(A)= \{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\} \}
+      \end{math}
+    \end{enumerate}
+  \end{enumerate}
+\end{document}
