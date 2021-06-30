@@ -6,6 +6,8 @@ def converter_decimal_base_b(base,numero):
     retorno = 0
     expoente = 0
     retorno = ''
+    1234
+    2
     while(numero > 0):
         resto = numero % base
         digito_b = LISTA_SIMBOLOS[resto]
@@ -13,12 +15,8 @@ def converter_decimal_base_b(base,numero):
         numero //= base
     return retorno
 
-base = int(input('Insira a base >> '))
-if base <= 1:
-    print('A base inserida tem que ser maior que 1')
-else:
-    if(base > len(LISTA_SIMBOLOS)):
-        print('Este algoritmo não suporta uma base tão grande de representação ')
-    else:
-        numero = input('Insira o número >> ')
-        print(f'{numero} convertido da base decimal para a base {base} é : {converter_decimal_base_b(base,numero)}')
+
+numero = input('Insira o número >> ')
+print(f'{numero} convertido da base decimal para binário é : {converter_decimal_base_b(2,numero)}')
+print(f'{numero} convertido da base decimal para octal é : {converter_decimal_base_b(8,numero)}')
+print(f'{numero} convertido da base decimal para hexadecimal é : {converter_decimal_base_b(16,numero)}')
