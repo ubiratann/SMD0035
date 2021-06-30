@@ -1,0 +1,97 @@
+% \documentclass{article}
+\documentclass{abntex2}
+\usepackage{hyperref}
+% \usepackage[shortlabels]{enumitem}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\geometry{a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm}
+\begin{document}
+
+  \begin{center}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=3cm]{logo-ufc.PNG}
+    \end{figure}
+    \textbf{
+      Universidade Federal do Ceará\\
+      Disciplina: Matemática e Física para Jogos \\
+      Professor: Gilvan Maia \\
+      Aluno: Ubiratan Júnior \\
+      LISTA DE EXERCÍCIOS 01 - Bases Numéricas
+    }
+  \end{center}
+
+  \begin{enumerate}
+    \item \textbf{Realize as seguintes mudanças de bases numéricas}
+    \begin{enumerate}
+      \item \textbf{ 213 para a base 2}
+        \begin{math}
+          \\ 213_{10} = (1 \cdot 2^{7}) \ + \ (1 \cdot 2^{6}) \ + \ (1 \cdot 2^{4}) \ + \ (1 \cdot 2^{2}) \ + \ (1 \cdot 2^{0})
+          \\ 213_{10} = 11010101_{2}
+        \end{math}
+      \item \textbf{213 para a base 3}
+        \begin{math}
+          \\ 213_{10} = (2 \cdot 3^{4}) \ + \ (1 \cdot 3^{3}) \ + \ (2 \cdot 3^{2}) \ + \ (2 \cdot 3^{1})
+          \\ 213_{10} = 21220_{3}
+        \end{math}
+      \item \textbf{197 para a base 2}
+        \begin{math}
+          \\ 197_{10} = (1 \cdot 2^{7}) \ + \ (1 \cdot 2^{6}) \ + \ (1 \cdot 2 ^{2}) \ + \ (1 \cdot 2^{0})
+          \\ 197_{10} = 11000101_{2}
+        \end{math}
+      \item \textbf{197 para a base 4}
+        \begin{math}
+          \\ 197_{4} = (3 \cdot 4^{3}) \ + \ (1 \cdot 4^{1}) \ + \ (1 \cdot 4^{0})
+          \\ 197_{4} = 3011_{4}
+        \end{math}
+      \item \textbf{197 para a base hexadecimal}
+        \begin{math}
+          \\ 197_{10} = (12 \cdot 16^{1}) \ + \ (5 \cdot 16^{0})
+          \\ 197_{10} = C5_{16}
+        \end{math}
+    \end{enumerate}
+    \item \textbf{Resolva as seguintes questões:}
+    \begin{enumerate}
+      \item \textbf{Calcule $ 010101_{2} \ + \ 001101_{2} $ e confira o resultado na base decimal.}
+      \begin{math}
+        \\ 010101_{2} \ + \ 001101_{2} = 100010_{2}
+        \\ 21_{10} \ \ \ \ \ \  + \ \ \ \ \ 13_{10} \  = \ \ 34_{10}
+      \end{math}
+      \item \textbf{Tome os resultados dos itens (a) e (c) da questão anterior. Subtraia o primeiro do segundo.}
+      \begin{math}
+        \\ 11010101_{2} \ - \
+           11000101_{2} = 00010000_{2}
+      \end{math}
+      \item \textbf{Quanto é $ 1102_{3} + 0211_{3}$?}
+      \begin{math}
+        \\ 1102_{3} \ + \
+           0211_{3} = 2020_{3}
+      \end{math}
+      \item \textbf{Qual o resultado do item anterior em decimal?}
+      \begin{math}
+        \\ 2020_{3} = (2 \cdot 3^{3}) \ + \ (2 \cdot 3^{1})
+        \\ 2020_{3} = 54_{10} + 6_{10} = 60_{10}
+      \end{math}
+    \end{enumerate}
+    \item \textbf{Resolva as seguintes questões usando suas proprias palavras}
+    \begin{enumerate}
+      \item \textbf{O que é a representação binária por complemento de 2? Para que serve?}
+      \linebreak É um técnica que se usa para representar números negativos na base binária, onde para representarmos um número negativo precisamos inverter os bits do número escolhido e somar 1, assim, através do bit mais significativo vamos saber se ele é negativo ou positivo.
+      \item \textbf{O que é \textit{overflow}? O que é \textit{underflow}? Como estes fenômenos podem inferir na vida de um programador de jogos }
+      \begin{itemize}
+        \item \textbf{overflow} \linebreak
+        Dado um sistema de representação numérica, o overflow acontece quando tentamos representar um número maior do que o maior número que esse sistema consegue representar.
+        \item \textbf{underflow} \linebreak
+        Dado um sistema de representação numérica, o underflow acontece quando tentamos representar um número menor do que o menor número que esse sistema consegue representar.
+        \item \textbf{Como esses fenômenos podem interferir na vida de um programador de jogos?} \linebreak
+        Imagine em um jogo de luta, onde existem combos de luta com multiplicadores de dano, caso o combo seja tão extraordinário que supere o limite máximo de representação do sistema numérico usado, o dano não será poderá ser representado.
+      \end{itemize}
+    \end{enumerate}
+  \end{enumerate}
+\end{document}
+
+
+% 0 1 2 3  4  5  6    7    8
+% 1 2 4 8 16 32 64  128  256

@@ -1,0 +1,63 @@
+% \documentclass{article}
+\documentclass{abntex2}
+\usepackage{hyperref}
+% \usepackage[shortlabels]{enumitem}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\geometry{a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm}
+
+\begin{document}
+  \begin{center}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=3cm]{logo-ufc.PNG}
+    \end{figure}
+    \textbf{
+      Universidade Federal do Ceará\\
+      Disciplina: Matemática e Física para Jogos \\
+      Professor: Gilvan Maia \\
+      Aluno: Ubiratan Júnior \\
+      LISTA DE EXERCÍCIOS 02 - Unidade 01
+    }
+  \end{center}
+  \begin{enumerate}
+    \item \textbf{Pesquise pelos termos CRC (\textit{Cyclic Redundance Check}) e \textit{Checksum}}
+    \begin{enumerate}
+      \item \textbf{O que é CRC e quais são as suas aplicações?} \newline
+      É uma técnica de detecção de erros que normalmente é usada em meios de comunicação sem fio, a técnica consiste em adicionar um valor ao arquivo baseado no resto de divisão polinomial do seu conteúdo. No ato da recuperação do dado o cálculo é refeito e comparado com o valor gerado anteriormente.
+      \item \textbf{Os algoritmos de CRC e checksum são inteiramente confiáveis?} \newline
+      Não,o checksum por se tratar de uma soma, é vulnerável diante da propriedade de comutativaidade da soma enquanto o CRC não é aplicável para proteção contra alteração intencional dos dados pois não há nenhum tipo de autenticação, logo um invasor pode editar a mensagem e recalcular seu código de verificação sem que a substituição seja detectada.
+
+    \end{enumerate}
+    \item \textbf{Pesquise sobre Geradores de Números Aleatórios}
+    \begin{enumerate}
+      \item \textbf{Esses números são realmente aleatórios?} \newline
+      Não, como os números são gerados por computadores, eles não tem a capacidade de executar experimentos totalmente aleatórios por si mesmo, a alternativa para se gerar esse tipo de número é usar infromações de um evento externo que sejam passadas para a máquina.
+      \item \textbf{Cite exemplos de situações nas quais não é desejável ter um gerador totalmente aleatório.} \newline
+      Um caso onde é desejável controlar a aleatoriedade seria quando desejamos compensar diferança de nível em jogos multiplayer online que tem equipes geradas aleatoriamente, por exemplo em filas ranqueadas de FPS ou Mobas, se as equipes forem formadas de forma totalmente aleatória há a chance de os níveis dos times formados ser muito desigual.
+      \item \textbf{O que é "semente" (\textit{seed}) no contexto do geradores de números pseudoaletórios?} \newline
+      Como os geradores não são totalmente aleatórios, eles partem de um ponto de inicial e determinísitco para inicar a gerar os números, o seed é exatamente esse ponto.
+      \item \textbf{Quais algoritmos para geração de números aleatórios estão disponíveis na sua linguagem de programação favorita?} \newline
+      Em JavaScript nativamente temos apenas a função Math.random(), um fato interessante é que não há a possibilidade de alterar o seed dessa função segunda a documentação econtrada em
+      \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random}{MDN web docs}
+    \end{enumerate}
+    \item \textbf{Já ouviu falar do lendário código para calcular rapidamente o inverso multiplicativo da raiz quadrada? Pesquise sobre a funçao \textit{InvSqrt()}. Como é possível estimar \textit{1.0/sqrt(x)} sem recorrer a divisões nem à raiz quadrada ?} \newline
+    Nunca tinha visto falar sobre a função, o calculo sem divisões e uso de raizes quadradas só é possível por conta da constante \textit{0x5f3759df} e do operador $>>$ (que nada mais é que uma forma "mecânica" de se efetuar uma divisão por 2).
+    \newpage
+    \item \textbf{Pesquise sobre as séries de Taylor}
+    \begin{enumerate}
+      \item \textbf{Como utilizar séries de Taylor para calcular o valor aproximado de funções trigonométricas como \textit{seno, cosseno} e \textit{tangente}?} \newline
+      Como as funções trigonométricas podem ser derivadas n vezes podemos simplesmente usar a fórmula:
+      \\
+      $$
+        {\displaystyle p(x)=f(a)+f'(a){\frac {\left(x-a\right)^{1}}{1!}}+f''(a){\frac {\left(x-a\right)^{2}}{2!}}+...+f^{(n)}(a){\frac {\left(x-a\right)^{n}}{n!}}}
+      $$
+
+      Substituindo f pela função desejada.
+      \item \textbf{Você consegue enxergar a importância desse artifício teórico no cálculo de raízes de funções, nos problemas de otimização (\textit{e.g}, estimar o valor mínimo ou máximo de uma função), nos jogos eletrônicos e na Computação Gráfica?} \newline
+      Sim, visto que o uso de funções mais simples para solucionar funções complicadas através de aproximações com erro baixo são fundamentais para garantir que um algoritmo tenha ótimo desempenho e entregue o máximo de fidelidade/corretude nos cálculos.
+    \end{enumerate}
+  \end{enumerate}
+\end{document}
