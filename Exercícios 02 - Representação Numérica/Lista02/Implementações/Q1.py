@@ -6,8 +6,6 @@ def converter_decimal_base_b(base,numero):
     retorno = 0
     expoente = 0
     retorno = ''
-    1234
-    2
     while(numero > 0):
         resto = numero % base
         digito_b = LISTA_SIMBOLOS[resto]
